@@ -38,6 +38,14 @@
     padding: 10px;
     position:fixed;
 }
+
+.header p {
+    top:2px;
+    left:400px;
+    position: fixed;
+    transform: rotate(-1deg);
+    background-color: #090f2f00;
+}
 #buttons {
     border-color: #09102d;
     background-color: #09102d;

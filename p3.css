@@ -9,8 +9,12 @@
 #waves{
     background-color: #090f2f00;
     position:fixed;
-    left: -3px;
-    top: -.3vw;
+    left: 0;
+    top: 0;
+    /* Make SVG scale to screen width reliably on mobile */
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 199.78149 / 63.62468;
     animation-name:intro;
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(1,-100,5,1);
@@ -19,10 +23,18 @@
 
 #waves video{
     pointer-events: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #waves use{
     color: red;
+}
+
+/* Avoid "transition: all" affecting SVG sizing on mobile */
+#waves, #waves * {
+    transition: none !important;
 }
 .header {
     padding: 0vw;

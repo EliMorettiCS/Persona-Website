@@ -3,64 +3,46 @@
     color: whitesmoke;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all .2s;
+    scrollbar-width: none;
 }
-.banner {
-    height: 100px;
-    width: 120%;
-    position:fixed;
-    left:-6px;
-    top:-20px;
+.clip-svg {
+    clip-path: url("drawing.svg#clipPath5");
+    position: fixed;
+    width: 600px;
+    height: auto;
+    aspect-ratio: 199.78 / 63.62;
+    transform: translate(-2px, -2px);
+    transform-origin: top left;
+    object-fit: cover;
 }
-#banner1 {
-    height: 160px;
-    width: 120%;
-    background-color: #3842af;
-    position:fixed;
-    left:-6px;
-    top:-99px;
-    transform: rotate(-1deg);
+
+/* Mobile */
+@media (max-width: 480px) {
+    .clip-svg {
+        width: 300px;
+    }
 }
-#banner2 {
-    height: 160px;
-    width: 120%;
-    left:-6px;
-    top:50px;
-    background-color: rgba(0, 255, 255, 0);
-    transform: rotate(0deg);
-    background-image: url("textures/wave-blue.png");
-    background-size: contain;
-    background-size: 100px;
-    background-repeat: repeat-x;
-    animation : hover 5s linear infinite;
-    z-index: 1;
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .clip-svg {
+        width: 500px;
+    }
 }
-#banner3 {
-    height: 160px;
-    width: 120%;
-    left: -6px;
-    top:70px;
-    background-color: rgba(0, 255, 255, 0);
-    transform: rotate(0deg);
-    background-image: url("textures/wave-cyan.png");
-    background-size: contain;
-    background-size: 100px;
-    background-repeat: repeat-x;
-    animation : hover 5.5s linear infinite;
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .clip-svg {
+        width: 800px;
+    }
 }
 .header {
     margin: -4px;
     padding: 10px;
     position:fixed;
-}
-
-.header p {
-    top:8px;
-    left:400px;
-    position: fixed;
-    transform: rotate(-1deg);
-    background-color: #090f2f00;
-    font-weight: bold;
-    font-style:italic;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 #buttons {
     border-color: #09102d;
@@ -72,9 +54,8 @@
     justify-content: space-evenly;
     position: relative; 
     z-index: 1;
-    transform: rotate(-1deg);
 }
-.header button {
+#buttons button {
     background-color: #090f2f00;
     border-color: rgba(245, 245, 245, 0);
     border-style: solid;
@@ -87,7 +68,7 @@
     font-weight:bold;
 }
 
-.header button:hover {
+#buttons button:hover {
     background-color: whitesmoke;
     border-color: whitesmoke;
     padding-right: 30px;

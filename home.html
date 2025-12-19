@@ -6,9 +6,22 @@
     </head>
     <body>
         <div class="header">
-            <video class="clip-svg" autoplay muted loop>
-                <source src="textures/waves.mp4" type="video/mp4">
-            </video>
+            <svg id="waves" viewBox="0 0 199.78149 63.62468" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="waveClip">
+                    <use href="drawing.svg#path3" />
+                    </clipPath>
+                </defs>
+                <foreignObject x="0" y="0" width="199.78149" height="63.62468" clip-path="url(#waveClip)">
+                    <video src="textures/waves.mp4"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        poster="textures/wave-screenshot.png"
+                        style="width:100%;height:100%;object-fit:cover;"></video>
+                </foreignObject>
+            </svg>
                 <div id="buttons">
                     <button>Home</button>
                     <button>Notes</button>
@@ -16,7 +29,6 @@
                     <button>Stats</button>
                     <button>Account</button>
                 </div>
-                <p>I should write something...</p>
         </div>
         <p>Yo</p>
         <p>Yo</p>

@@ -18,18 +18,38 @@ function updateClock() {
     }
     if (Number(hours) > 12){
         if (evenSecond){
-            document.getElementById("clock").textContent = Number(hours)-12+":"+minutes;
+            if (minutes < 10){
+                document.getElementById("clock").textContent = Number(hours)-12+":0"+minutes;
+            }
+            else {
+                document.getElementById("clock").textContent = Number(hours)-12+":"+minutes;
+            }
         }
         else{
-            document.getElementById("clock").textContent = Number(hours)-12+" "+minutes;
+            if (minutes < 10){
+                document.getElementById("clock").textContent = Number(hours)-12+" 0"+minutes;
+            }
+            else{
+                document.getElementById("clock").textContent = Number(hours)-12+" "+minutes;
+            }
         }
     }
     else {
         if (evenSecond){
-            document.getElementById("clock").textContent = hours+":"+minutes;
+            if (minutes < 10){
+                document.getElementById("clock").textContent = hours+":0"+minutes;
+            }
+            else {
+                document.getElementById("clock").textContent = hours+":"+minutes;
+            }
         }
         else{
-            document.getElementById("clock").textContent = hours+" "+minutes;
+            if (minutes<10){
+                document.getElementById("clock").textContent = hours+" 0"+minutes;
+            }
+            else{
+                document.getElementById("clock").textContent = hours+" "+minutes;
+            }
         }
     }
     if (evenSecond){
@@ -42,5 +62,5 @@ function updateClock() {
     document.getElementById("date").textContent = date;
     document.getElementById("year").textContent = currentDate.getFullYear();
 }
-
+updateClock()
 setInterval(updateClock, 1000);

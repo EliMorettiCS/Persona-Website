@@ -100,7 +100,7 @@
     font-weight:bold;
     font-size: 5vw;
     margin: 0;
-    transform: translate(40vw, -9vw);
+    transform: translate(30vw, -9vw);
     animation-name:intro;
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(1,-100,5,1);

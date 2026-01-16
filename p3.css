@@ -4,6 +4,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all .2s;
     scrollbar-width: none;
+    background-image: ("wallpaper.jpg");
 }
 
 @font-face{
@@ -28,8 +29,8 @@
     position: relative; 
     z-index: 1;
     animation-name:intro;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(1,-100,5,1);
+    animation-duration: 1s;
+    animation-timing-function:ease-in-out;
 }
 #buttons button {
     background-color: #090f2f00;
@@ -39,7 +40,7 @@
     transform: translateY(-1px);
     flex-grow: 1;
     font-weight:bold;
-    font-size: 1.5vw;
+    font-size: 2vw;
     padding-right: .7vw;
     padding-left: .7vw;
     padding-bottom:0;
@@ -53,8 +54,12 @@
     top: 5px;
     right: 10px;
     flex-direction: column;
+    animation-name:intro;
+    animation-duration: 1s;
+    animation-timing-function:ease-in-out;
 }
 #day {
+    text-shadow: rgba(0, 0, 0, 0.492) .3vw .3vw;
     font-family: primary;
     background-color: #090f2f00;
     color: #2dc7ff;
@@ -62,9 +67,6 @@
     font-size: 6vw;
     margin: 0;
     transform:translate(0vw,-1vw);
-    animation-name:intro;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(1,-100,5,1);
 }
 
 #date {
@@ -75,9 +77,6 @@
     font-size: 4vw;
     margin: 0;
     transform: translate(5vw, -4.5vw);
-    animation-name:intro;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(1,-100,5,1);
 }
 
 #year {
@@ -88,23 +87,25 @@
     font-size: 1.5vw;
     margin: 0;
     transform: translate(17.5vw, -6.9vw);
-    animation-name:intro;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(1,-100,5,1);
 }
 
 #clock {
     font-family: primary;
-    color: #ffffff;
-    background-color: #090f2f00;
+    text-align: center;
+    letter-spacing: -.2vw;
+    background-color: #ff000000;
     font-weight:bold;
     font-size: 5vw;
     margin: 0;
-    transform: translate(30vw, -9vw);
-    animation-name:intro;
-    animation-duration: 2s;
-    animation-timing-function: cubic-bezier(1,-100,5,1);
-    -webkit-text-stroke: #323ca1 .25vw;
+    transform: translate(10vw, -6.5vw);
+    color: #01fefe;
+    -webkit-text-stroke: #0d0e4c56 .25vw;
+    border-width: 0px;
+    padding: 0;
+    line-height: 0;
+}
+#clock:hover {
+    -webkit-text-stroke: #484ac656 .25vw;
 }
 
 #buttons button:hover {
@@ -117,13 +118,11 @@
 
 @keyframes intro {
     0% {transform: translate(0px,-100px)}
-    50% {transform: translate(0px,50px);}
     100% {transform: translate(inherit,inherit);}
 }
 
 @keyframes introbanner {
-    0% {top: -150px;}
-    30% {top: -30px;}
+    0% {top: -150px;transform: rotate(-4deg);}
     100% {}
 }
 
@@ -134,12 +133,19 @@
     position:fixed;
     left:-6vw;
     top:-4%;
-    transform: rotate(.5deg);
+    transform:rotate(.5deg);
     animation-name:introbanner;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: cubic-bezier(1,-100,5,1);
 }
+#miniNews *{
+    background-color: #282dc500;
+}
 
+
+#miniNews{
+    background-color: #2429ac;
+}
 *{
-    /*animation-duration:0s !important;*/
+    animation-duration:0s !important;
 }

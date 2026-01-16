@@ -150,3 +150,19 @@
 *{
     animation-duration:0s !important;
 }
+
+#timeTitle {
+    font-family: primary;
+    text-align: right;
+    letter-spacing: -.2vw;
+    background-color: #ff000000;
+    font-weight:bold;
+    font-size: 2vw;
+    margin: 0;
+    transform: translate(-20vw, -5.6vw);
+    color: #01fefe;
+    -webkit-text-stroke: #0d0e4c56 .25vw;
+    border-width: 0px;
+    padding: 0;
+    line-height: 0;
+}

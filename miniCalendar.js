@@ -96,6 +96,27 @@ function updateClock() {
         }
     }
     document.getElementById("day").textContent = day;
+    if (day == "Sunday"){
+        document.getElementById("day").style.setProperty("letter-spacing","1vw") = day;
+    }
+    if (day == "Monday"){
+        document.getElementById("day").style.setProperty("letter-spacing",".5vw") = day;
+    }
+    if (day == "Tuesday"){
+        document.getElementById("day").style.setProperty("letter-spacing",".2vw") = day;
+    }
+    if (day == "Wednesday"){
+        document.getElementById("day").style.setProperty("letter-spacing","-.1vw") = day;
+    }
+    if (day == "Thursday"){
+        document.getElementById("day").style.setProperty("letter-spacing",".1vw") = day;
+    }
+    if (day == "Friday"){
+        document.getElementById("day").style.setProperty("letter-spacing","2vw") = day;
+    }
+    if (day == "Saturday"){
+        document.getElementById("day").style.setProperty("letter-spacing",".2vw") = day;
+    }
     document.getElementById("date").textContent = date;
     document.getElementById("year").textContent = currentDate.getFullYear();
 }
@@ -105,23 +126,23 @@ document.getElementById("clock").onclick = function() {
         clockMode = 2;
         updateClock()
         console.log("Current Clock Mode Is "+clockMode)
-        document.getElementById("clock").style.setProperty("font-size","5vw")
+        document.getElementById("clock").style.setProperty("font-size","vw")
         document.getElementById("clock").style.setProperty("transform","translate(10vw, -6.5vw)")
     }
     else if (clockMode == 2){
-        clockMode = 3;
+        clockMode = 1;
         updateClock()
         console.log("Current Clock Mode Is "+clockMode)
         document.getElementById("clock").style.setProperty("font-size","4vw")
         document.getElementById("clock").style.setProperty("transform","translate(1vw, -5.5vw)")
     }
-    else if (clockMode == 3){
-        clockMode = 1;
-        updateClock()
-        console.log("Current Clock Mode Is "+clockMode)
-        document.getElementById("clock").style.setProperty("font-size","5vw")
-        document.getElementById("clock").style.setProperty("transform","translate(10vw, -6.5vw)")
-    }
+    //else if (clockMode == 3){
+    //    clockMode = 1;
+    //    updateClock()
+    //    console.log("Current Clock Mode Is "+clockMode)
+    //    document.getElementById("clock").style.setProperty("font-size","5vw")
+    //   document.getElementById("clock").style.setProperty("transform","translate(10vw, -6.5vw)")
+    //}
 }
 updateClock()
 setInterval(updateClock, 1000);

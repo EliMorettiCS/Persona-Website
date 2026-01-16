@@ -37,7 +37,7 @@
     border-color: rgba(245, 245, 245, 0);
     border-style: solid;
     border-radius: 50px;
-    transform: translateY(-1px);
+    transform: translateY(-.1vw);
     flex-grow: 1;
     font-weight:bold;
     font-size: 2vw;
@@ -48,11 +48,11 @@
 }
 
 #miniCalender {
-    background-color: #090f2f00;
+    background-color: rgba(9, 15, 47, 0);
     display: flex;
     position: fixed;
-    top: 5px;
-    right: 10px;
+    top: .5vw;
+    right: 3vw;
     flex-direction: column;
     animation-name:intro;
     animation-duration: 1s;
@@ -66,7 +66,8 @@
     font-weight:bolder;
     font-size: 6vw;
     margin: 0;
-    transform:translate(0vw,-1vw);
+    transform:translate(3vw,-.8vw);
+    letter-spacing: 1vw;
 }
 
 #date {
@@ -97,7 +98,7 @@
     font-weight:bold;
     font-size: 5vw;
     margin: 0;
-    transform: translate(10vw, -6.5vw);
+    transform: translate(11vw, -6.5vw);
     color: #01fefe;
     -webkit-text-stroke: #0d0e4c56 .25vw;
     border-width: 0px;
